@@ -41,16 +41,16 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link to="#wallet" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
+            <Link to="#" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
               Trade
             </Link>
-            <Link to="/market" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
+            <Link to="/" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
               Market
             </Link>
-            <Link to="/portfolio" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
+            <Link to="/" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
               Portfolio
             </Link>
-            <Link to="/about" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
+            <Link to="/" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
               About
             </Link>
           </div>
@@ -64,11 +64,7 @@ const Navbar = () => {
               {theme === 'light' ? <Moon size={18} /> : <Sun size={18} />}
             </button>
             
-            <button 
-              className="hidden md:flex items-center gap-2 px-5 py-2.5 bg-trader-blue hover:bg-trader-darkBlue text-white rounded-lg transition-colors button-glow"
-            >
-              <span>Connect Wallet</span>
-            </button>
+            
             
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -93,32 +89,27 @@ const Navbar = () => {
               Trade
             </Link>
             <Link 
-              to="/market" 
+              to="/" 
               className="px-4 py-3 text-trader-darkGray dark:text-trader-gray hover:bg-trader-gray hover:bg-opacity-20 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Market
             </Link>
             <Link 
-              to="/portfolio" 
+              to="/" 
               className="px-4 py-3 text-trader-darkGray dark:text-trader-gray hover:bg-trader-gray hover:bg-opacity-20 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Portfolio
             </Link>
             <Link 
-              to="/about" 
+              to="/" 
               className="px-4 py-3 text-trader-darkGray dark:text-trader-gray hover:bg-trader-gray hover:bg-opacity-20 rounded-lg transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               About
             </Link>
-            <button 
-              className="mt-2 px-4 py-3 bg-trader-blue hover:bg-trader-darkBlue text-white rounded-lg transition-colors button-glow"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Connect Wallet
-            </button>
+            
           </div>
         </div>
       )}
