@@ -41,7 +41,7 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
+            <Link to="#wallet" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
               Trade
             </Link>
             <Link to="/market" className="text-trader-darkGray dark:text-trader-gray hover:text-trader-blue dark:hover:text-trader-lightBlue transition-colors">
