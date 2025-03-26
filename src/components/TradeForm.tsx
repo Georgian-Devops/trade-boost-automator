@@ -329,11 +329,11 @@ const TradeForm = () => {
                     className="flex items-center gap-1 text-trader-blue hover:text-trader-darkBlue text-xs transition-colors"
                   >
                     <QrCode size={14} />
-                    <span>{showQrCode}</span>
+                    <span>{showQrCode ? 'Hide QR' : 'Hide QR'}</span>
                   </button>
                 </div>
                 
-                {showQrCode && (
+                
                   <div className="flex flex-col items-center justify-center mt-4 bg-white p-3 rounded-lg">
                     <QRCodeSVG
                       value={tronWalletAddress}
@@ -347,7 +347,7 @@ const TradeForm = () => {
                       Scan to deposit {formData.fromAmount} USDT
                     </p>
                   </div>
-                )}
+                
                 
                 <div className="mt-4 flex items-center justify-center">
                   <a 
