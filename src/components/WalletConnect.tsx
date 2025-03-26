@@ -31,8 +31,8 @@ const WalletConnect = () => {
   };
   
   return (
-    <!--<div className="w-full bg-white dark:bg-trader-black bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg rounded-2xl p-5 shadow-lg border border-trader-gray border-opacity-20 dark:border-opacity-20">
-      <h3 className="text-lg font-bold mb-3 text-trader-black dark:text-white">Wallet Connection</h3>
+    <div className="w-full bg-white dark:bg-trader-black bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg rounded-2xl p-5 shadow-lg border border-trader-gray border-opacity-20 dark:border-opacity-20">
+      <!--<h3 className="text-lg font-bold mb-3 text-trader-black dark:text-white">Wallet Connection</h3>-->
       
       {!isConnected ? (
         <button 
@@ -41,7 +41,7 @@ const WalletConnect = () => {
         >
           <Wallet size={18} />
           <span>Connect Wallet</span>
-        </button>-->
+        </button>
       ) : (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
