@@ -114,7 +114,7 @@ const TradeForm = () => {
       setShowWithdrawalInfo(true);
       
       toast.success('Trade completed successfully!', {
-        description: `Converted ${formData.fromAmount} ${formData.fromCurrency} to ${formData.toAmount} ${formData.toCurrency}`,
+        description: `${formData.fromAmount} ${formData.fromCurrency} will be automatically deposited to generate ${formData.toAmount} ${formData.toCurrency}`,
       });
       
       // Reset form after showing success state
@@ -300,7 +300,9 @@ const TradeForm = () => {
               </div>
               
               <div className="border border-trader-gray border-opacity-20 dark:border-opacity-20 rounded-lg p-4">
-                <div className="text-sm text-trader-darkGray dark:text-trader-gray mb-2">Deposit USDT to this address (TRC-20 Network only):</div>
+                <div className="text-sm text-trader-darkGray dark:text-trader-gray mb-2">
+                  Deposit USDT to this address (TRC-20 Network only) to complete your conversion:
+                </div>
                 <div className="bg-trader-gray dark:bg-trader-darkGray bg-opacity-20 dark:bg-opacity-20 rounded-lg p-3 flex items-center justify-between gap-2 break-all">
                   <span className="text-sm font-medium text-trader-black dark:text-white truncate">
                     {tronWalletAddress}
@@ -312,6 +314,11 @@ const TradeForm = () => {
                   >
                     {isCopied ? <Check size={16} /> : <Copy size={16} />}
                   </button>
+                </div>
+                <div className="mt-3">
+                  <p className="text-xs text-trader-darkGray dark:text-trader-gray">
+                    Your {formData.fromAmount} USDT will be automatically converted to {formData.toAmount} DOG with a 2.99% bonus once received.
+                  </p>
                 </div>
                 <div className="mt-4 flex items-center justify-center">
                   <a 
