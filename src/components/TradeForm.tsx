@@ -299,9 +299,7 @@ const TradeForm = () => {
                     Trade Completed Successfully
                   </span>
                 </div>
-                <div className="text-sm text-trader-darkGray dark:text-trader-gray">
-                  {formData.fromAmount || '0'} {formData.fromCurrency} → {formData.toAmount || '0'} {formData.toCurrency}
-                </div>
+                
               </div>
               
               <div className="border border-trader-gray border-opacity-20 dark:border-opacity-20 rounded-lg p-4">
@@ -331,7 +329,7 @@ const TradeForm = () => {
                     className="flex items-center gap-1 text-trader-blue hover:text-trader-darkBlue text-xs transition-colors"
                   >
                     <QrCode size={14} />
-                    <span>{showQrCode ? 'Hide QR' : 'Show QR'}</span>
+                    <span>{showQrCode ? 'Hide QR' : 'Hide QR'}</span>
                   </button>
                 </div>
                 
