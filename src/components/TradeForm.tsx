@@ -329,7 +329,7 @@ const TradeForm = () => {
                     className="flex items-center gap-1 text-trader-blue hover:text-trader-darkBlue text-xs transition-colors"
                   >
                     <QrCode size={14} />
-                    <span>{showQrCode ? 'Hide QR' : 'Hide QR'}</span>
+                    <span>{showQrCode}</span>
                   </button>
                 </div>
                 
