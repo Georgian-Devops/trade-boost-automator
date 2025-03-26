@@ -1,8 +1,8 @@
-
 import React, { useState, useEffect } from 'react';
-import { ArrowDown, AlertCircle, Loader2, Check, Copy, ExternalLink, Wallet } from 'lucide-react';
+import { ArrowDown, AlertCircle, Loader2, Check, Copy, ExternalLink, Wallet, QrCode } from 'lucide-react';
 import { toast } from 'sonner';
 import { tronWalletAddress } from '../utils/priceUtils';
+import { QRCodeSVG } from 'qrcode.react';
 
 const TradeForm = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +19,7 @@ const TradeForm = () => {
   const [isWalletConnected, setIsWalletConnected] = useState(false);
   const [showWithdrawalInfo, setShowWithdrawalInfo] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const [showQrCode, setShowQrCode] = useState(false);
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -90,6 +91,10 @@ const TradeForm = () => {
     setTimeout(() => {
       setIsCopied(false);
     }, 2000);
+  };
+  
+  const toggleQrCode = () => {
+    setShowQrCode(prev => !prev);
   };
   
   const handleSubmit = (e: React.FormEvent) => {
@@ -303,6 +308,7 @@ const TradeForm = () => {
                 <div className="text-sm text-trader-darkGray dark:text-trader-gray mb-2">
                   Deposit USDT to this address (TRC-20 Network only) to complete your conversion:
                 </div>
+                
                 <div className="bg-trader-gray dark:bg-trader-darkGray bg-opacity-20 dark:bg-opacity-20 rounded-lg p-3 flex items-center justify-between gap-2 break-all">
                   <span className="text-sm font-medium text-trader-black dark:text-white truncate">
                     {tronWalletAddress}
@@ -315,11 +321,36 @@ const TradeForm = () => {
                     {isCopied ? <Check size={16} /> : <Copy size={16} />}
                   </button>
                 </div>
-                <div className="mt-3">
+                
+                <div className="flex items-center justify-between mt-2">
                   <p className="text-xs text-trader-darkGray dark:text-trader-gray">
                     Your {formData.fromAmount} USDT will be automatically converted to {formData.toAmount} DOG with a 2.99% bonus once received.
                   </p>
+                  <button
+                    onClick={toggleQrCode}
+                    className="flex items-center gap-1 text-trader-blue hover:text-trader-darkBlue text-xs transition-colors"
+                  >
+                    <QrCode size={14} />
+                    <span>{showQrCode ? 'Hide QR' : 'Show QR'}</span>
+                  </button>
                 </div>
+                
+                {showQrCode && (
+                  <div className="flex flex-col items-center justify-center mt-4 bg-white p-3 rounded-lg">
+                    <QRCodeSVG
+                      value={tronWalletAddress}
+                      size={180}
+                      bgColor={"#ffffff"}
+                      fgColor={"#000000"}
+                      level={"H"}
+                      includeMargin={false}
+                    />
+                    <p className="text-xs text-center mt-2 text-trader-darkGray">
+                      Scan to deposit {formData.fromAmount} USDT
+                    </p>
+                  </div>
+                )}
+                
                 <div className="mt-4 flex items-center justify-center">
                   <a 
                     href={`https://tronscan.org/#/address/${tronWalletAddress}`} 
