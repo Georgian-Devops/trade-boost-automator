@@ -41,7 +41,7 @@ const WalletConnect = () => {
         >
           <Wallet size={18} />
           <span>Connect Wallet</span>
-        </button>
+        </button>-->
       ) : (
         <div className="space-y-4">
           <div className="flex items-center justify-between">
@@ -87,7 +87,7 @@ const WalletConnect = () => {
           </div>
         </div>
       )}
-    </div>-->
+    </div>
   );
 };
 
