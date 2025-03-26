@@ -32,15 +32,6 @@ const PriceTracker: React.FC = () => {
           favorite: true
         },
         {
-          id: 'ethereum',
-          symbol: 'ETH',
-          name: 'Ethereum',
-          price: 2326.78,
-          change24h: 1.87,
-          volume: 14267000000,
-          marketCap: 277820000000
-        },
-        {
           id: 'dogecoin',
           symbol: 'DOG',
           name: 'Dogecoin',
@@ -58,24 +49,6 @@ const PriceTracker: React.FC = () => {
           change24h: 0.01,
           volume: 48762000000,
           marketCap: 83450000000
-        },
-        {
-          id: 'bnb',
-          symbol: 'BNB',
-          name: 'BNB',
-          price: 284.37,
-          change24h: -0.89,
-          volume: 1287000000,
-          marketCap: 46298000000
-        },
-        {
-          id: 'cardano',
-          symbol: 'ADA',
-          name: 'Cardano',
-          price: 0.51,
-          change24h: -1.25,
-          volume: 875000000,
-          marketCap: 16750000000
         }
       ];
 
@@ -142,9 +115,9 @@ const PriceTracker: React.FC = () => {
                 <td className="px-6 py-4">
                   <div className="flex items-center">
                     <div className="w-8 h-8 rounded-full bg-opacity-20 flex items-center justify-center mr-3" 
-                      style={{ backgroundColor: `${crypto.symbol === 'BTC' ? '#F7931A' : crypto.symbol === 'ETH' ? '#627EEA' : crypto.symbol === 'DOG' ? '#C2A633' : crypto.symbol === 'USDT' ? '#26A17B' : crypto.symbol === 'BNB' ? '#F3BA2F' : '#0033AD'}20` }}>
+                      style={{ backgroundColor: `${crypto.symbol === 'BTC' ? '#F7931A' : crypto.symbol === 'DOG' ? '#C2A633' : crypto.symbol === 'USDT' ? '#26A17B' : '#0033AD'}20` }}>
                       <span className="text-sm font-bold" 
-                        style={{ color: crypto.symbol === 'BTC' ? '#F7931A' : crypto.symbol === 'ETH' ? '#627EEA' : crypto.symbol === 'DOG' ? '#C2A633' : crypto.symbol === 'USDT' ? '#26A17B' : crypto.symbol === 'BNB' ? '#F3BA2F' : '#0033AD' }}>
+                        style={{ color: crypto.symbol === 'BTC' ? '#F7931A' : crypto.symbol === 'DOG' ? '#C2A633' : crypto.symbol === 'USDT' ? '#26A17B' : '#0033AD' }}>
                         {crypto.symbol.charAt(0)}
                       </span>
                     </div>

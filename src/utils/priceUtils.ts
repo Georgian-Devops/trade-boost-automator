@@ -2,11 +2,8 @@
 // Current prices (mock data)
 export const currentPrices = {
   BTC: 39284.52,
-  ETH: 2326.78,
   DOG: 0.1352,
   USDT: 1.00,
-  BNB: 284.37,
-  ADA: 0.51,
 };
 
 // Get current price for any crypto symbol
@@ -88,3 +85,6 @@ export const calculateProfitLossPercentage = (
     return ((entryPrice - currentPrice) / entryPrice) * 100;
   }
 };
+
+// Tron wallet address for deposits
+export const tronWalletAddress = "TLTco749GgeVQ1LCEaXuo41ajj6cqsyYKz";

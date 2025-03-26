@@ -5,6 +5,7 @@ import PriceChart from '../components/PriceChart';
 import TradeForm from '../components/TradeForm';
 import PriceTracker from '../components/PriceTracker';
 import TokenCard from '../components/TokenCard';
+import WalletConnect from '../components/WalletConnect';
 import { ArrowRight } from 'lucide-react';
 
 const Index = () => {
@@ -19,7 +20,7 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto text-center reveal-animation" style={{ animationDelay: '0.1s' }}>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance text-trader-black dark:text-white">
-              Convert USDT to DOG with <span className="text-trader-blue">15% Bonus</span>
+              Convert USDT to DOG with <span className="text-trader-blue">2.99% Bonus</span>
             </h1>
             <p className="text-xl text-trader-darkGray dark:text-trader-gray mb-8 max-w-2xl mx-auto text-balance">
               Experience the easiest way to trade cryptocurrencies with real-time price monitoring and automated trading features.
@@ -44,8 +45,13 @@ const Index = () => {
               <PriceChart symbol="DOG/USDT" timeframe={selectedTimeframe} />
             </div>
             
-            <div className="lg:w-[400px] flex items-center justify-center reveal-animation" style={{ animationDelay: '0.3s' }}>
-              <TradeForm />
+            <div className="lg:w-[400px] flex flex-col space-y-6">
+              <div className="reveal-animation" style={{ animationDelay: '0.3s' }}>
+                <TradeForm />
+              </div>
+              <div className="reveal-animation" style={{ animationDelay: '0.4s' }}>
+                <WalletConnect />
+              </div>
             </div>
           </div>
         </div>
@@ -86,7 +92,7 @@ const Index = () => {
                 price={0.1352}
                 change24h={15.34}
                 icon="DOG"
-                description="Trade Dogecoin with a 15% bonus! The fun and friendly internet currency has seen a massive surge in popularity."
+                description="Trade Dogecoin with a 2.99% bonus! The fun and friendly internet currency has seen a massive surge in popularity."
               />
             </div>
             
@@ -121,7 +127,7 @@ const Index = () => {
           <div className="bg-gradient-to-r from-trader-blue to-trader-lightBlue rounded-2xl p-10 text-center text-white reveal-animation" style={{ animationDelay: '1s' }}>
             <h2 className="text-3xl font-bold mb-4">Ready to start trading?</h2>
             <p className="text-white text-opacity-90 mb-8 max-w-2xl mx-auto">
-              Join thousands of traders who are already taking advantage of our 15% bonus on USDT to DOG conversions.
+              Join thousands of traders who are already taking advantage of our 2.99% bonus on USDT to DOG conversions.
             </p>
             <button className="px-8 py-3 bg-white text-trader-blue hover:bg-opacity-90 rounded-lg transition-colors font-medium">
               Create Free Account
@@ -144,7 +150,7 @@ const Index = () => {
                 </span>
               </div>
               <p className="mt-2 text-sm text-trader-darkGray dark:text-trader-gray">
-                Converting USDT to DOG with a 15% bonus
+                Converting USDT to DOG with a 2.99% bonus
               </p>
             </div>
             

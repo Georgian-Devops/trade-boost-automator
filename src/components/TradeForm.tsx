@@ -14,7 +14,7 @@ const TradeForm = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [dogRate, setDogRate] = useState(0.1352);
-  const bonusRate = 1.15; // 15% bonus
+  const bonusRate = 1.0299; // 2.99% bonus
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,7 +49,7 @@ const TradeForm = () => {
   };
   
   const calculateToAmount = (fromAmount: number) => {
-    // USDT to DOG with 15% bonus
+    // USDT to DOG with 2.99% bonus
     return ((fromAmount / dogRate) * bonusRate).toFixed(6);
   };
   
@@ -109,7 +109,7 @@ const TradeForm = () => {
           <div className="w-6 h-6 rounded-full bg-gradient-to-r from-trader-blue to-trader-lightBlue flex items-center justify-center">
             <span className="text-white font-bold text-xs">+</span>
           </div>
-          <span className="text-sm font-medium text-trader-blue">15% Bonus on all USDT to DOG trades!</span>
+          <span className="text-sm font-medium text-trader-blue">2.99% Bonus on all USDT to DOG trades!</span>
         </div>
       </div>
       
@@ -178,7 +178,7 @@ const TradeForm = () => {
           <div className="font-medium">
             <span>1 {formData.fromCurrency} = </span>
             <span className="text-trader-blue">{(1 / dogRate * bonusRate).toFixed(6)} {formData.toCurrency}</span>
-            <span className="ml-1 text-trader-green text-xs">(+15%)</span>
+            <span className="ml-1 text-trader-green text-xs">(+2.99%)</span>
           </div>
         </div>
         
