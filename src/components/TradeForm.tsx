@@ -135,7 +135,7 @@ const TradeForm = () => {
   };
   
   return (
-    <div className="w-full max-w-md bg-white dark:bg-trader-black bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-trader-gray border-opacity-20 dark:border-opacity-20 animate-scale">
+    <div id="wallet" className="w-full max-w-md bg-white dark:bg-trader-black bg-opacity-80 dark:bg-opacity-80 backdrop-blur-lg rounded-2xl p-6 shadow-lg border border-trader-gray border-opacity-20 dark:border-opacity-20 animate-scale">
       <h2 className="text-xl font-bold mb-6 text-center text-trader-black dark:text-white">
         Convert USDT to DOG
       </h2>
